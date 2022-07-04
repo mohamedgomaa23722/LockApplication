@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/pinroot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#12232E"
+        >
+
+        <TextView
+            android:id="@+id/titleprogress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp"
+            android:text="Enter your Passcode"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_centerHorizontal="true"
+            />
+
+        <com.chaos.view.PinView
+            android:id="@+id/firstPinView"
+            style="@style/PinWidget.PinView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:autoText="true"
+            android:cursorVisible="true"
+            android:focusable="true"
+            android:inputType="textPassword"
+            android:padding="@dimen/_5sdp"
+            android:textColor="#FFE500"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:cursorColor="@color/white"
+            app:cursorWidth="@dimen/_2sdp"
+            app:hideLineWhenFilled="true"
+            app:itemCount="5"
+            app:itemHeight="@dimen/_48sdp"
+            app:itemRadius="@dimen/_4sdp"
+            app:itemSpacing="0dp"
+            app:itemWidth="@dimen/_48sdp"
+            app:lineColor="#4DA8DA"
+            app:lineWidth="@dimen/_2sdp"
+            app:viewType="rectangle"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/titleprogress"
+            />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:layout_marginEnd="@dimen/_24sdp"
+            android:layout_marginBottom="16dp"
+            android:background="#4DA8DA"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/firstPinView"
+          />
+
+        <include
+            android:id="@+id/numberlist"
+            layout="@layout/numberitem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/view"
+            />
+    </RelativeLayout>
+</layout>

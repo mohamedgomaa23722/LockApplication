@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#12232E">
+
+        <ImageView
+            android:id="@+id/FingerPrintIcon"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@drawable/finger"
+            android:visibility="visible"
+            android:layout_centerHorizontal="true"
+             />
+
+        <TextView
+            android:id="@+id/FIngerPrintInstruction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/FingerPrintIcon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Put your finger on the sensor to ulock "
+            android:textColor="@color/white"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/status_Password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:padding="20sp"
+            android:textColor="@color/white"
+            android:layout_below="@+id/FIngerPrintInstruction"
+            android:layout_centerHorizontal="true"
+            />
+
+        <com.andrognito.patternlockview.PatternLockView
+            android:id="@+id/patternLockView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_250sdp"
+            android:layout_below="@+id/status_Password"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            app:aspectRatio="square"
+            app:aspectRatioEnabled="true"
+            app:correctStateColor="#FF5D5D"
+            app:dotAnimationDuration="200"
+            app:dotCount="3"
+            app:dotNormalSize="10sp"
+            app:dotSelectedSize="12dp"
+            app:normalStateColor="@color/white"
+            app:pathEndAnimationDuration="10"
+            app:pathWidth="8dp"
+            app:wrongStateColor="@color/teal_700" />
+
+        <ImageView
+            android:id="@+id/PinIcon"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@drawable/pincircle"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_baseline_dialpad_24"
+            android:visibility="visible"
+            android:layout_below="@+id/patternLockView"
+            android:layout_centerHorizontal="true"
+            />
+    </RelativeLayout>
+</layout>

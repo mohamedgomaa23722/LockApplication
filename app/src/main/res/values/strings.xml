@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LockApp</string>
+    <string name="search_by_app_name">Search by app name</string>
+    <string name="app_locker">App Locker</string>
+    <string name="we_are_waiting_for_your_permission_sir_please_enable_app_to_connect_and_control_the_other_apps">we are waiting for your permission sir please enable app to connect and control the other apps</string>
+    <string name="set_permission">Set Permission</string>
+    <string name="app_title">App Title</string>
+</resources>
